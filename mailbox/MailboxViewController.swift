@@ -279,7 +279,8 @@ class MailboxViewController: UIViewController {
         } else if edgePan.state == UIGestureRecognizerState.Changed {
             print("Gesture changed")
         
-            contentView.center = CGPoint(x: contentView.center.x + trans/3, y: contentView.center.y)
+            contentView.center = CGPoint(x: contentViewOriginalCenter.x + trans, y: contentViewOriginalCenter.y)
+            print(trans)
             
         } else if edgePan.state == UIGestureRecognizerState.Ended {
             print("Gesture ended")
